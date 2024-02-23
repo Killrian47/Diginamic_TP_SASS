@@ -1,0 +1,50 @@
+@use 'token';
+
+@mixin my-borders($color) {
+    border: 1px $color solid;
+    border-left: 5px $color solid;
+}
+
+.evenement-aside {
+    display: flex;
+    align-items: center;
+    h4{
+        font-weight: 500;
+    }
+}
+
+.month  {
+    display: flex;
+    justify-content: space-between;
+    color: token.$primary_color;
+    font-weight: 700;
+    img {
+        width: 70px;
+        height: 30px;
+    }
+}
+
+.first-box-right {
+    @include my-borders(token.$primary_color);
+    padding: 10px;
+}
+
+.second-box-right {
+    @include my-borders(token.$secondary_color);
+    padding: 10px;
+}
+
+.third-box-right {
+    @include my-borders(black);
+    padding: 10px;
+}
+
+.fourth-box-right {
+    @include my-borders(token.$primary_color);
+    padding: 10px;
+}
+
+.five-box-right {
+    @include my-borders(token.$secondary_color);
+    padding: 10px;
+}

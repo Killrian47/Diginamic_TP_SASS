@@ -1,0 +1,39 @@
+@use 'token';
+
+@mixin icons-color {
+    color: token.$primary_color;
+}
+
+header {
+    margin: 20px 10px 0 50px;
+    display: flex;
+    justify-content: space-between;
+
+    .header-left {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        img {
+            width: 250px;
+            height: auto;
+        }
+        p {
+            color: token.$primary_color;
+        }
+    }
+
+    .header-right {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        i {
+            font-size: token.$icon_size;
+            @include icons-color;
+        }
+        .social-logo {
+            width: 200px;
+            cursor: pointer;
+        }
+    }
+}
